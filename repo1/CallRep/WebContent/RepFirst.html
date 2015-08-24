@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script>
+function ajaxCall()
+{
+	$.ajax({
+		url:'RepFirst.jsp',
+		success:function(responseText){
+			$("#AjaxResponse").html(responseText);
+			
+		}
+	});
+}
+</script>
+</head>
+<body>
+
+<input type="button" value="View Email List" onclick="ajaxCall()"/>
+<input type="button" value="View ">
+
+<div id="AjaxResponse" class="AjaxResponse"></div>
+<div id="inc"></div>
+
+
+</body>
+</html>
